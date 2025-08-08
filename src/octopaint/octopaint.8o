@@ -78,17 +78,19 @@
 		drawcursor
 		v0 := 0x01   if v0 key then brushtype := smallbrush #keyboard 1
 		v0 := 0x02   if v0 key then brushtype := medbrush   #keyboard 2
-		v0 := 0x03   if v0 key then brushtype := largebrush #keyboard 2
+		v0 := 0x03   if v0 key then brushtype := largebrush #keyboard 3
 		
-		v0 := 0x0a   if v0 key then plane 1 #keyboard Z
-		v0 := 0x00   if v0 key then plane 2 #keyboard X
+		v0 := 0x0c   if v0 key then plane 1 #keyboard 4
+		v0 := 0x0d   if v0 key then plane 2 #keyboard R
+		v0 := 0x0e   if v0 key then plane 4 #keyboard F
+		v0 := 0x0f   if v0 key then plane 8 #keyboard V
 
 		v0 := 0x05   if v0 key then py += -1 # keyboard W
 		v0 := 0x08   if v0 key then py +=  1 # keyboard S
 		v0 := 0x07   if v0 key then px += -1 # keyboard A
 		v0 := 0x09   if v0 key then px +=  1 # keyboard D
 		
-		v0 := 0x0f   if v0 key begin #keyboard V
+		v0 := 0x06   if v0 key begin #keyboard E
 			drawmode := draw
 			stamp
 		end
